@@ -9,6 +9,7 @@ Object={EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}#1.1#0; ieframe.dll
 IconForm="PlayGIF"
 Startup="PlayGIF"
 HelpFile=""
+ExeName32="PlayGIF.exe"
 Command32=""
 Name="Play_GIF"
 HelpContextID="0"
