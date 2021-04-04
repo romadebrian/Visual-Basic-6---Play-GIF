@@ -134,7 +134,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Public pic As Integer
+Dim pic As Integer
 
 Private Sub Command1_Click()
 If Command1.Caption = "Play" Then
@@ -161,19 +161,10 @@ Private Sub Timer1_Timer()
 pic = pic + 1
 Label1.Caption = pic
 
-Select Case pic
-    Case 1
-        Image1.Picture = LoadPicture(App.Path & "\file\frame006.gif")
-    Case 2
-        Image1.Picture = LoadPicture(App.Path & "\file\frame007.gif")
-    Case 3
-        Image1.Picture = LoadPicture(App.Path & "\file\frame008.gif")
-    Case 4
-        Image1.Picture = LoadPicture(App.Path & "\file\frame009.gif")
-    Case 5
-        Image1.Picture = LoadPicture(App.Path & "\file\frame010.gif")
-    Case 6
-        Image1.Picture = LoadPicture(App.Path & "\file\frame011.gif")
-        pic = 1
-End Select
+Image1.Picture = LoadPicture(App.Path & "\file\" & pic & ".gif")
+
+If pic = 6 Then
+pic = 1
+End If
+
 End Sub
